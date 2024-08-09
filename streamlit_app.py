@@ -22,7 +22,7 @@ if submit_button:
     env = os.getenv('APP_ENV', 'stage')  # Default to 'stage' if not set
 
     # Load the configurations from the config file
-    with open('../api/env_config.json') as config_file:
+    with open('env_config.json') as config_file:
         config = json.load(config_file)
         environment_config = config['environments'][env]
 
@@ -34,7 +34,7 @@ if submit_button:
     headers = environment_config['auth']
 
     # Base object template
-    timestamp = "2024-08-09T13:48:00.850Z"
+    timestamp = "2024-08-09T14:06:00.850Z"
 
     # Data payload with dynamically generated documents
     data = {
@@ -48,7 +48,7 @@ if submit_button:
                 "id": "22222223",
                 "title": "test import",
                 "contentType": "article-bawu",
-                "checksum": "22222225",
+                "checksum": timestamp,
                 "publishControl": {
                     "firstPublicationDate": timestamp,
                     "significantPublicationDate": timestamp,
